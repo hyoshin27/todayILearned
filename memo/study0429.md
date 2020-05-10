@@ -1,7 +1,11 @@
-MOCHA란
+#리팩토링 자바스크립트
+
+>MOCHA란
+
 Mocha는 Node.js와 브라우저에서 실행되는 JavaScript 테스트 프레임 워크이다. 비동기 테스트를 만들 수 있다. 자체적으로 assertion을 지원하지 않기 때문에 다른 Assertion라이브러리와 함께 사용해야 한다.
 
-자바스크립트로 테스트 종류
+>자바스크립트로 테스트 종류
+
 Karma
 Jasmine
 Jest
@@ -9,9 +13,8 @@ Chai
 Mocha
 공식문서 : https://mochajs.org/
 
+>문법
 
-
-문법
 describe - 테스트할 그룹
 
 before - 테스트할 그룹에서 시작 전에 실행
@@ -24,30 +27,33 @@ after - 테스트할 그룹에서 종료 후에 실행
 
 it- 테스트 케이스
 
+>준비
 
-
-준비
 node.js, npm, mocha
 mocha 설치 :npm -g install mocha
 
+>버전확인
 
-버전확인
 npm -v
 node -v
 mocha -V
+
+>예제
 
 function add(x, y) {
 
     return x + y;
 }
+
 function moreThan3(x) {
 
     return x >= 3;
 }
+
 describe('테스트', () =>{
 
     before(() => {
-        console.log('---------------- 잔체 테스트 시작 전 -------------- ');
+        console.log('---------------- 전체 테스트 시작 전 -------------- ');
     });
 
     after(() => {
