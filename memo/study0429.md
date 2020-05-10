@@ -34,11 +34,15 @@ mocha 설치 :npm -g install mocha
 
 >버전확인
 
+~~~
 npm -v
 node -v
 mocha -V
+~~~
 
 >예제
+
+~~~
 
 function add(x, y) {
 
@@ -79,3 +83,4 @@ describe('테스트', () =>{
     });
 });
 
+~~~

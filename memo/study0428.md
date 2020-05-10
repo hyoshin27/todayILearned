@@ -56,54 +56,58 @@
 
 1.글자수 만큼 마스킹처리하기
 
-글자수만큼마스킹
+~~~java
 @Test
 public void 글자수만큼_마스킹(){
     String test = "123456";
     assertEquals("******", test.replaceAll("[0-9]","*"));
 }
+~~~
 
 
 2.핸드폰 뒷자리 마스킹
 
-핸드폰뒷자리마스킹
+~~~java
 @Test
 public void 핸드폰_뒷자리_마스킹(){
     String phone = "010-1234-1234";
     assertEquals(phone.replaceAll("010-1234-****", "(01[0|1|7|8|9])([-*])(\\d{3,4})([-*])(\\d{4})", "$1$2$3$4****"));
 }
-
+~~~
 
 3.핸드폰 가운데 마스킹
 
-핸드폰가운데마스킹
+~~~java
 @Test
 public void 핸드폰_가운데_마스킹(){
     String phone = "010-1234-1234";
 
     assertEquals(phone.replaceAll("010-****-1234", "^(01[0|1|7|8|9])([-*])(\\d{3,4})([-*])(\\d{4})$", "$1$2****$4$5"));
 }
+~~~
 
 
 4.앞자리 몇개 빼고 마스킹
 
-앞자리몇개빼고마스킹
+~~~java
+
 @Test
 public void 앞자리_몇개_뺴고_마스킹(){
     String test = "123456";
     assertEquals("1*****", test.replaceAll("(?<=.{1})." , "*"));
 }
 
+~~~
 
 5.앞자리 몇개만 마스킹
 
-앞자리 몇개만 마스킹
+~~~java
 @Test
 public void 앞자리_몇개만_마스킹(){
     String test = "123456";
     assertEquals( "*23456",test.replaceAll("(?<!.{1})." , "*"));
 }
-
+~~~
 
 주의
 
