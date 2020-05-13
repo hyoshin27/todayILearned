@@ -1,7 +1,5 @@
 #SOLID 원칙
 
-> 개념
-
 >SRP
 
 단일 책임 원칙 single responsibility principle
