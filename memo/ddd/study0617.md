@@ -1,8 +1,8 @@
 #DDD start!
 
->11. CORS
+>11. CQRS
 
-CORS : Command Query Responsibility Segregation 의 약자로 상태를 변경하는 명령을 위한 모델과 조회를 위한 모델을 분리하는 패턴. 복잡한 도메인에 적합
+CQRS : Command Query Responsibility Segregation 의 약자로 상태를 변경하는 명령을 위한 모델과 조회를 위한 모델을 분리하는 패턴. 복잡한 도메인에 적합
 
 명령 보델과 조회 모델이 서로 다른 데이터 저장소를 사용할 경우 동기화 시점에 따라 구현 방식이 달라질 수 있다. 
 명령 모델에서 데이터가 바뀌자마자 변경내역을 바로 조회 모델에 반영해야 한다면 동기 이벤트와 글로벌 트랜잭션을 사용해서 실시간으로 동기화를 할 수 있다.
