@@ -64,7 +64,7 @@ public class ApiControllerTest {
         mockMvc.perform(get("/api/test")
                 .content(mapper.writeValueAsString(list))
                 .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.id").value("1"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value("1"));
 
     } 
     
