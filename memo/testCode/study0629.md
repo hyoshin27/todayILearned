@@ -20,7 +20,7 @@
 
 좋은 테스트
 
-- Fase : 빠른
+- Fast : 빠른
 
 - Isolated : 고립된
 
